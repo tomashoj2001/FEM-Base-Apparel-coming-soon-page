@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    --Linear-Light-Gradient: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+    --Linear-Pink-Gradient: 135deg, hsl(0, 80%, 86%),hsl(0, 74%, 74%);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: red 1px solid; */
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(var(--Linear-Light-Gradient));
+    max-width: 100vw;
+}
+
+.logo {
+    margin: 2rem;
+}
+
+.picture {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-image: url(images/hero-mobile.jpg);
+    background-size: cover;
+}
+
+section {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+
+.title{
+    color: var(--Dark-Grayish-Red);
+    font-weight: 600;
+    font-size: 3.4rem;
+    letter-spacing: 5px;
+    margin: 3rem auto 2rem;
+}
+
+span {
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+}
+
+.text {
+    color: var(--Desaturated-Red);
+    line-height: 1.2rem;
+}
+
+.form {
+    margin: 2rem auto 4rem;
+    position: relative;
+}
+
+.form__input {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--Desaturated-Red);
+    height: 3rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--Dark-Grayish-Red);
+}
+
+.form__input::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--Desaturated-Red);
+}
+
+.form__input.active,
+.form__input:focus {
+    border-color: var(--Soft-Red);
+}
+
+.form__submit {
+    cursor: pointer;
+    width: 75px;
+    height: calc(3rem + 2px);
+    border-radius: 1.5rem;
+    position: absolute;
+    right: -25px;
+    top: 0;  
+}
+
+.form__bg {
+    width: 100%;    
+    height: 100%;
+    border-radius: 1.5rem;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(var(--Linear-Pink-Gradient));
+}
+
+.form__submit:hover .form__bg {
+    background: var(--Desaturated-Red);
+}
+
+.form__img {
+    height: 30px;
+    position: absolute;
+    top: calc(((3rem + 2px) / 2) - 15px);
+    right: 25px;
+}
+
+.form__img--error {
+    height: 20px;
+    right: 65px;
+    top: calc(((3rem + 2px) / 2) - 10px);
+    display: none;
+}
+
+.form__img.active {
+    display: block;
+}
+
+.alert {
+    color: var(--Soft-Red);
+    position: relative;
+    top: 0.75rem;
+    left: 1.5rem;
+    text-align: left;
+    display: none;
+}
+
+.alert.active {
+    display: block;
+}
+
+
+        /* RESPONSIVE */
+
+@media screen and (min-width: 800px) {
+    body{
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-size: cover;
+    }
+    .logo {
+        position: fixed;
+        margin: 3rem 8rem;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        height: 100vh;
+        align-items: center;
+    }
+    .picture {
+        order: 1;
+        background-image: url(images/hero-desktop.jpg);
+        height: 100%;
+    }
+    section {
+        text-align: left;
+        width: 50%;
+        margin-left: 8rem;
+        margin-top: 16%;
+    }
+    .title {
+        font-size: 5rem;
+    }
+    .text {
+        line-height: 1.8rem;
+    }
+    .attribution {
+        position: fixed;
+        bottom: 0.5rem;
+        left: 15vw;
+    }
+}

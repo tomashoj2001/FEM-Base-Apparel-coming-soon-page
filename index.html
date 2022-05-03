@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-bottom: 0.5rem;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="images/logo.svg" alt="Logo" class="logo__img">
+  </div>
+
+  <main>
+    <div class="picture"></div>
+    <section>
+      <h1 class="title"><span>We're</span> coming soon</h1>
+      <p class="text">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+      <form class="form">
+        <input type="email" class="form__input" placeholder="Email Address" required>
+        <div class="form__submit">
+          <input type="submit" class="form__bg" value="">
+          <img src="images/icon-arrow.svg" alt="arrow" class="form__img">
+        </div>
+
+            <!-- error -->
+        <img src="images/icon-error.svg" alt="error" class="form__img form__img--error">
+        <div class="alert">Please provide a valid email</div>
+      </form>
+
+    </section>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/tomashoj2001">Tomi Hojnadel</a>.
+    </p>
+  </footer>
+  
+  <script src="scripts.js"></script>
+</body>
+</html>
